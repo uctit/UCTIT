@@ -1,3 +1,3 @@
 const dev = process.env.NODE_ENV !== 'production';
 
-export const server = dev ? 'http://localhost:3000' : 'https://uctit.herokuapp.com'
+export const server = dev ? 'http://localhost:3000' : 'uctitbd.com'
