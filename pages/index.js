@@ -28,14 +28,14 @@ const Home = () => {
 		<Box className={styles.page}>
 			<Head>
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-				<title>UCT IT - Your vision is ours</title>
+				<title>UCT IT - Welcome</title>
 			</Head>
 
 			<Introduction />
 
-			<About />
-
 			<Featured />
+
+			<About />
 
 			<Reviews />
 

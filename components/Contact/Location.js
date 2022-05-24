@@ -51,7 +51,7 @@ const Featured = () => {
 							<Box>
 								<Typography className={styles.sectionTitle}>Our Location</Typography>
 								<Typography className={styles.sectionSubtitle}>
-									House 37, Road 7,
+									House 37 (3rd Floor), Road 7,
 								</Typography>
 								<Typography className={styles.sectionSubtitle}>
 
@@ -60,7 +60,7 @@ const Featured = () => {
 
 								<Typography className={styles.sectionSubtitle}>
 
-									Dhaka-1216, Bangladesh.
+									Dhaka-1230, Bangladesh.
 								</Typography>
 							</Box>
 

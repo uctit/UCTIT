@@ -17,16 +17,15 @@ import {
 
 const review = [
 	{
-		review: 'I have used the IT services for over 12 years. Their excellent knowledge of IT solutions, attention to detail and fast response are invaluable',
+		review: 'I have used the IT services for months. Their excellent knowledge of IT solutions, attention to detail and fast response are invaluable',
 		firstname: 'Marjan',
-		lastname: 'Salmanian',
-		company: 'MERRICK ARCHITECTURE LTD.'
+		lastname: 'Salmaini',
+		//company: 'MERRICK ARCHITECTURE LTD.'
 	},
 	{
 		review: 'They take the headache off of technology. We benefit from their reliability and availability, they take time to learn how we operate our business and they grow with us',
-		firstname: 'Grant',
-		lastname: 'Haddock',
-		company: 'HADDOCK & COMPANY LAWYERS.'
+		firstname: 'Redwan',
+		lastname: 'Hassan',
 	}
 ]
 
@@ -39,8 +38,6 @@ const Works = () => {
 			page: {
 				width: '100%',
 				height: '100%vh',
-				backgroundColor: theme.palette.secondary.main,
-				marginTop: theme.spacing(6),
 				paddingTop: theme.spacing(8),
 				paddingBottom: theme.spacing(8),
 				display: 'flex',

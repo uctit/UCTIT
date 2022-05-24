@@ -2,76 +2,83 @@ import { useState } from 'react'
 
 import {
 	Box,
-	Button,
-	List,
-	ListItem,
-	ListItemText,
-	AppBar,
-	Toolbar,
 	Typography,
 	makeStyles,
+	useTheme,
+	useMediaQuery
 } from '@material-ui/core'
 
-import Link from 'next/link';
-
 import {
-	ExpandMore,
-	MenuOutlined
+	Phone,
+	LocationOn,
+	Timer
 } from '@material-ui/icons';
 
-import NavBarList from './NavBarList';
-import Drawer from './Drawer';
 
-const useStyles = makeStyles((theme) => {
-	return {
-		appbar: {
-			display: 'flex',
-			flexDirection: 'row',
-			alignItems: 'center',
-			justifyContent: 'space-between',
-			padding: theme.spacing(0.5),
-			backgroundColor: theme.palette.primary.main,
-		},
-		menuButton: {
-			color: theme.palette.secondary.main,
-			minWidth: theme.spacing(1)
-		},
-		title: {
-			fontSize: 32,
-			fontWeight: 'bold',
-		},
-		listitem: {
-			cursor: 'pointer',
-			paddingLeft: theme.spacing(4),
-			paddingRight: theme.spacing(4)
+
+
+function InfoBar() {
+	
+	const theme = useTheme();
+	const breakpoint = useMediaQuery(theme.breakpoints.up("lg"));
+
+	const useStyles = makeStyles((theme) => {
+		return {
+			bar: {
+				display: 'flex',
+				flexDirection: 'row',
+				alignItems: 'center',
+				justifyContent: 'flex-end',
+				paddingTop: theme.spacing(1.6),
+				paddingBottom: theme.spacing(0.8),
+				padding: theme.spacing(2),
+				backgroundColor: theme.palette.primary.dark,
+				color: theme.palette.secondary.light
+			},
+			content: {
+				display: 'flex',
+				flexDirection: 'row',
+				alignItems: 'center',
+				justifyContent: 'center',
+			},
+			text: {
+				fontSize: breakpoint ? 16: 10,
+				paddingLeft: theme.spacing(1),
+				paddingRight: theme.spacing(1)
+			}
 		}
-	}
-});
-
-function NavBar({ title, items, breakpointUp }) {
+	});
+	
 	const styles = useStyles();
 
-	const [state, setState] = useState({});
-	const [drawerOpen, setDrawerOpen] = useState(false);
-
-	const handleHover = (e, b) => {
-		setState(() => {
-			return { [e]: b };
-		});
-	}
-
 	return (
-		<Box>
-			<AppBar
-				className={styles.appbar}
-				elevation={0}
-			>
-				<Toolbar>
-					<Typography className={styles.title}>{title}</Typography>
-				</Toolbar>
-			</AppBar>
+		<Box className={styles.bar}>
+			<Box className={styles.content}>
+				<Phone />
+				<Typography className={styles.text}>Phone: +880 1714-020193</Typography>
+			</Box>
+			{
+				breakpoint && 
+				<Box className={styles.content}>
+					<LocationOn />
+					<Typography className={styles.text}>
+						House 37 (3rd Floor), Road 7,
+
+						Sector 3, Uttara,
+
+						Dhaka-1230, Bangladesh
+					</Typography>
+				</Box>
+			}
+			
+			<Box className={styles.content}>
+				<Timer />
+				<Typography className={styles.text}>
+					9 a.m - 9 p.m
+				</Typography>
+			</Box>
 		</Box>
 	)
 }
 
-export default NavBar;
+export default InfoBar;

@@ -10,6 +10,7 @@ import { useRouter } from 'next/router';
 import service from '../../components/App/Functions/service'
 
 import Heading from '../../components/Services/Heading';
+import Subheading from '../../components/Services/Subheading';
 import ServiceFeatureCard from '../../components/Services/ServiceFeatureCard';
 import Grow from '../../components/Home/Grow';
 import Footer from '../../components/Home/Footer';
@@ -52,6 +53,9 @@ const Service = () => {
 			</Head>
 			<Heading
 				title={serviceinfo?.title}
+			/>
+			<Subheading 
+				subtitle={serviceinfo?.subtitle}	
 			/>
 
 			<Grid container spacing={2}>

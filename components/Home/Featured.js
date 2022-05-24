@@ -1,5 +1,6 @@
 import {
 	Box,
+	Button,
 	Grid,
 	Paper,
 	makeStyles,
@@ -7,6 +8,7 @@ import {
 } from '@material-ui/core';
 
 import Image from 'next/image'
+import Link from 'next/link';
 import service from '../App/Functions/service';
 
 const useStyles = makeStyles((theme) => {
@@ -16,6 +18,9 @@ const useStyles = makeStyles((theme) => {
 			flexDirection: 'column',
 			overflow: 'hidden',
 			backgroundColor: theme.palette.secondary.light,
+		},
+		button: {
+			margin: theme.spacing(3)
 		},
 		section: {
 			textAlign: 'center',
@@ -34,8 +39,8 @@ const useStyles = makeStyles((theme) => {
 		sectionSubtitle: {
 			fontSize: '28px',
 			color: theme.palette.primary.main,
-			marginBottom: theme.spacing(1.5)
-		}
+			margin: theme.spacing(1.5)
+		},
 	}
 });
 
@@ -52,8 +57,13 @@ const Featured = () => {
 			<Box>
 				{services.map((service, index) => (
 					<Grid key={index} container spacing={6} direction={index % 2 === 0 ? 'row' : 'row-reverse'} justifyContent='center' alignItems='center' className={styles.section} >
-						<Grid item xs={12} lg={6} >
-							<Typography className={styles.sectionSubtitle}>{service.title}</Typography>
+						<Grid item xs={12} lg={6}>
+							
+							<Link href={service.link} passHref>
+								<Button className={styles.button} variant='outlined'>
+									<Typography className={styles.sectionSubtitle}>{service.title}</Typography>
+								</Button>
+							</Link>
 							<Typography>{service.description}</Typography>
 						</Grid>
 

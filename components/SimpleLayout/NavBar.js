@@ -43,7 +43,10 @@ const useStyles = makeStyles((theme) => {
 		listitem: {
 			cursor: 'pointer',
 			paddingLeft: theme.spacing(4),
-			paddingRight: theme.spacing(4)
+			paddingRight: theme.spacing(4),
+		},
+		listitemtext: {
+			fontWeight: 'bold'
 		}
 	}
 });
@@ -89,7 +92,7 @@ function NavBar({ title, items, breakpointUp }) {
 										>
 											<Link href={item.link} passHref>
 												<ListItemText>
-													<Typography variant='subtitle1'>
+													<Typography className={styles.listitemtext}>
 														{item.title}
 													</Typography>
 												</ListItemText>

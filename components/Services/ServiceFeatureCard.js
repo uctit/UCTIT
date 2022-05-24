@@ -2,11 +2,12 @@ import { useState } from 'react';
 
 import {
 	Box,
-	Card,
 	CardContent,
 	makeStyles,
 	Typography,
 } from '@material-ui/core';
+
+import Card from '../App/Card'
 
 const useStyles = makeStyles((theme) => {
 	return {
@@ -15,7 +16,7 @@ const useStyles = makeStyles((theme) => {
 			flexDirection: 'column',
 			justifyContent: 'center',
 			alignItems: 'center',
-			margin: theme.spacing(3.5),
+			margin: theme.spacing(2),
 		},
 		cardcontent: {
 			display: 'flex',

@@ -22,6 +22,9 @@ import {
 	Apps,
 	Chat,
 
+	Gif,
+	PlayCircleOutline,
+	ViewArray
 
 } from '@material-ui/icons'
 
@@ -32,11 +35,44 @@ const getServices = () => {
 		[
 			{
 				title: 'Computer Training',
+				subtitle: 'Our Courses',
 				link: '/services/training',
-				description: '',
+				description: `UCT IT Has Been Providing Our Services With World-Class Quality And Has Numerous Satisfied Clients. We Have Designed All Of Our Training Courses Which Are Best Suited For The Students Of Bangladesh. 
+
+					But For That We Do Not Compromise The Quality Rather We Take Special Care Of Every Student Who Have IT Knowledge From Basic To Advanced`,
 				picture: '/Home/computer-training.svg',
 				shortdescription: 'Learn to use computers',
-				icon: <Computer style={{ fontSize: 110 }} />
+				icon: <Computer style={{ fontSize: 110 }} />,
+				features: {
+					title: 'Why Choose Us?',
+					description: `One Of The Main Objectives Of UCT IT is to create Skilled And Professionally Committed IT Experts, By Providing World-Class Training Facilities, To Contribute To The Development Of The IT Industry Of Bangladesh As Well As To Make Them Capable Enough To Work In The Local And International IT Industry And Marketplaces.
+
+						We Have Skilled And Experienced Trainer Team, Those Make Sure Each Student To Become Able To Prove Himself As A Qualified Professional In The Competitive Corporate World. 
+						
+						UCT IT Ensures First Strong Basic Knowledge On The Course Trainees Get Taught In. UCT IT Believes In Providing Standard Training Facilities, Which Allows Each Trainee To Become Successful IT Professionals And Freelancers, So That Those Can Contribute To Local IT Development For Long Run.`,
+					featureslist: [
+						{
+							title: 'Microsoft Office',
+							icon: <Equalizer style={{ fontSize: featuresFontSize }} />,
+							description: `In this course, you’ll learn A Suite Of Desktop Productivity Applications That Is Designed Specifically To Be Used For Office Or Business Use. It Mainly Consists Of Word, Excel, PowerPoint, Access, OneNote, Outlook And Publisher Applications.`
+						},
+						{
+							title: 'Graphics Design',
+							icon: <Gif style={{ fontSize: featuresFontSize }} />,
+							description: `In this course, you’ll learn the ins & outs of industry standard soft & practical skills of Graphic Design. This course is more focused on freelancing oriented marketplace works like Freelancer.com, Fiverr, 99 Designs etc. Building concepts to creating pixel perfect composition, everything is taught from scratch.`
+						},
+						{
+							title: 'Video Editing',
+							icon: <PlayCircleOutline style={{ fontSize: featuresFontSize }} />,
+							description: `If you want to be a freelancer or youtube content creator, we’re here to help! From opening a brand new youtube channel to working in giant marketplace like fiverr & freelancer, everything is served hot in this course. You’ll be able to learn how to start & finish a complete editing project from the scratch.`
+						},
+						{
+							title: 'Web Design & Development',
+							icon: <ViewArray style={{ fontSize: featuresFontSize }} />,
+							description: `In this course, you’ll be introduced to the boundless world of web designing which creates the overall look and feel when you’re using a website. It’s the process of planning and building the elements of your website, from structure and layout to images, colors, fonts and graphics.`
+						},
+					]
+				}
 			},
 			{
 				title: 'Digital Marketing',

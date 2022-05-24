@@ -14,6 +14,8 @@ import Link from 'next/link';
 import { Fade } from '@material-ui/core';
 import service from '../App/Functions/service';
 
+import InfoBar from '../SimpleLayout/InfoBar'
+
 const worldmap = '/intro.svg';
 
 const Introduction = () => {
@@ -29,7 +31,7 @@ const Introduction = () => {
 				overflow: 'hidden',
 			},
 			introBackground: {
-				height: '94vh',
+				height: '88vh',
 				backgroundImage: `url(${worldmap})`,
 				backgroundSize: 'cover',
 				backgroundPosition: 'center'
@@ -54,7 +56,6 @@ const Introduction = () => {
 			preServiceText: {
 				fontSize: isMdUp ? 32 : 24,
 				color: theme.palette.primary.dark,
-				marginTop: theme.spacing(2),
 				textAlign: 'center'
 			},
 			serviceText: {
@@ -110,11 +111,13 @@ const Introduction = () => {
 	return (
 		<Box className={styles.page}>
 
+			<InfoBar />
+			
 			<Box className={styles.introBackground}>
 				<Box className={styles.intro}>
-					<Typography className={styles.introText}>Your Vision is Ours</Typography>
-					<Typography className={styles.serviceText}>Reliable and Affordable IT Solutions and IT Services</Typography>
-					<Typography className={styles.preServiceText}>We offer</Typography>
+					<Typography className={styles.introText}>Welcome</Typography>
+					<Typography className={styles.serviceText}>We offer Reliable and Affordable IT Solutions and IT Services</Typography>
+					<Typography className={styles.preServiceText}>Including</Typography>
 					<Fade in={animation} timeout={{ enter: 600, exit: 450 }} onExited={() => changeServiceText()}>
 						<Typography className={styles.serviceText}>{services[serviceTextIndex].title}</Typography>
 					</Fade>
@@ -126,7 +129,6 @@ const Introduction = () => {
 							<Typography className={styles.buttonText}>Contact Us</Typography>
 						</Button>
 					</Link>
-					<Typography className={styles.descriptionText}>Hosted in Dhaka</Typography>
 
 				</Box>
 

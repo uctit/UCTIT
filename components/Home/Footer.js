@@ -144,13 +144,13 @@ const Introduction = () => {
 
 						</Box>
 						<Typography className={styles.navigationTitle}>
-							Email: 
+							Phone: +880 1714-020193
+						</Typography>
+						<Typography className={styles.navigationTitle}>
+							Email:  
 							<Link href={'mailto:uctibd@gmail.com'} passHref>
 								uctibd@gmail.com
 							</Link>
-						</Typography>
-						<Typography className={styles.navigationTitle}>
-							Phone: +880 1714-020193
 						</Typography>
 					</Grid>
 					{navigation.map((navitem, index1) => (
@@ -175,15 +175,13 @@ const Introduction = () => {
 					<Grid item xs={12} md>
 						<Typography className={styles.navigationTitle}>Our office</Typography>
 						<Typography>
-							House 37, Road 7,
+							House 37 (3rd Floor), Road 7,
 						</Typography>
 						<Typography>
 							Sector 3, Uttara,
 						</Typography>
-
 						<Typography>
-
-							Dhaka-1216, Bangladesh.
+							Dhaka-1230, Bangladesh.
 						</Typography>
 						<Box className={styles.navigationItem}>
 							<iframe width="300" height="300" id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.7276384922206!2d90.39277636711994!3d23.86380340450758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c5f407260b45%3A0xba53618e71d39a01!2sUttara%20Computer%20Training%20%26%20IT%20Firm!5e0!3m2!1sen!2sca!4v1653322944977!5m2!1sen!2sca" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0">
