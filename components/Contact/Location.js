@@ -72,7 +72,7 @@ const Featured = () => {
 
 								<Typography className={styles.sectionSubtitle}>
 									<Link href={'mailto:uctibd@gmail.com'} passHref>
-										Email: uctibd@gmail.com
+										Email: uctitbd@gmail.com
 									</Link>
 								</Typography>
 							</Box>

@@ -149,7 +149,7 @@ const Introduction = () => {
 						<Typography className={styles.navigationTitle}>
 							Email:  
 							<Link href={'mailto:uctibd@gmail.com'} passHref>
-								uctibd@gmail.com
+								uctitbd@gmail.com
 							</Link>
 						</Typography>
 					</Grid>
