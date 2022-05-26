@@ -21,6 +21,7 @@ import {
 
 import NavBarList from './NavBarList';
 import Drawer from './Drawer';
+import Image from 'next/image';
 
 const useStyles = makeStyles((theme) => {
 	return {
@@ -37,6 +38,7 @@ const useStyles = makeStyles((theme) => {
 			minWidth: theme.spacing(1)
 		},
 		title: {
+			marginLeft: theme.spacing(1),
 			fontSize: 32,
 			fontWeight: 'bold',
 		},
@@ -51,7 +53,7 @@ const useStyles = makeStyles((theme) => {
 	}
 });
 
-function NavBar({ title, items, breakpointUp }) {
+function NavBar({ logo, title, items, breakpointUp }) {
 	const styles = useStyles();
 
 	const [state, setState] = useState({});
@@ -70,6 +72,7 @@ function NavBar({ title, items, breakpointUp }) {
 				elevation={0}
 			>
 				<Toolbar>
+					<Image src={logo} width={50} height={50} alt='logo'/>
 					<Typography className={styles.title}>{title}</Typography>
 				</Toolbar>
 				<Toolbar>
@@ -116,6 +119,7 @@ function NavBar({ title, items, breakpointUp }) {
 			</AppBar>
 			{!breakpointUp &&
 				<Drawer
+					logo={logo}
 					title={title}
 					drawerItems={items}
 					drawerOpen={drawerOpen}

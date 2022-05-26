@@ -19,6 +19,7 @@ import {
 } from '@material-ui/icons';
 
 import Link from 'next/link';
+import Image from 'next/image'
 
 const useStyles = makeStyles((theme) => {
 	return {
@@ -37,7 +38,13 @@ const useStyles = makeStyles((theme) => {
 			alignItems: 'center',
 			padding: theme.spacing(2)
 		},
+		titleBox: {
+			display: 'flex',
+			justifyContent: 'center',
+			alignItems: 'center'
+		},
 		title: {
+			marginLeft: theme.spacing(1),
 			fontSize: 32,
 			fontWeight: 'bold',
 		},
@@ -53,7 +60,7 @@ const useStyles = makeStyles((theme) => {
 	}
 });
 
-function DrawerBar({ title, drawerItems, setDrawerOpen, drawerOpen }) {
+function DrawerBar({ logo, title, drawerItems, setDrawerOpen, drawerOpen }) {
 
 	const styles = useStyles();
 	const [state, setState] = useState({});
@@ -79,9 +86,13 @@ function DrawerBar({ title, drawerItems, setDrawerOpen, drawerOpen }) {
 			onClose={() => setDrawerOpen(false)}
 		>
 			<Box className={styles.titleContainer}>
-				<Typography className={styles.title}>
-					{title}
-				</Typography>
+				<Box className={styles.titleBox}>
+					<Image src={logo} width={50} height={50} alt='logo'/>
+					<Typography className={styles.title}>
+						{title}
+					</Typography>
+				</Box>
+				
 				<Button className={styles.closeButton} onClick={() => setDrawerOpen(false)}>
 					<CloseOutlined />
 				</Button>

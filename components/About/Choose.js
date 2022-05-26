@@ -73,7 +73,7 @@ const Certification = () => {
 			icon: <HowToReg className={styles.icon} />
 		},
 		{
-			title: 'Guaranteed refund if satisfaction not achieved',
+			title: 'Guaranteed refund options',
 			icon: <LocalAtm className={styles.icon} />
 		},
 	]

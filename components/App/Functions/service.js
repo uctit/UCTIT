@@ -24,7 +24,9 @@ import {
 
 	Gif,
 	PlayCircleOutline,
-	ViewArray
+	ViewArray,
+	Code,
+	Business
 
 } from '@material-ui/icons'
 
@@ -70,6 +72,16 @@ const getServices = () => {
 							title: 'Web Design & Development',
 							icon: <ViewArray style={{ fontSize: featuresFontSize }} />,
 							description: `In this course, you’ll be introduced to the boundless world of web designing which creates the overall look and feel when you’re using a website. It’s the process of planning and building the elements of your website, from structure and layout to images, colors, fonts and graphics.`
+						},
+						{
+							title: 'Programming',
+							icon: <Code style={{ fontSize: featuresFontSize }} />,
+							description: `Learn programming with our free online courses from real college courses from the world's leading universities. Master skills in basic programming languages such as Python, Java, C++ etc. Pick up these essential coding skills needed for frontend and/or backend App development, machine learning, IOS, Android, and much more.`
+						},
+						{
+							title: 'Auto CAD/Architect Design',
+							icon: <Business style={{ fontSize: featuresFontSize }} />,
+							description: `A selection of CAD courses ranging from 2D AutoCAD to advanced 3D modeling using applications like Autodesk Inventor and SolidWorks. Computer Aided Design (CAD) tools are being increasingly used in engineering and architectural fields. As well, CAD is finding applications in other areas such as facilities management and interior design.`
 						},
 					]
 				}

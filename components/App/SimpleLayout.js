@@ -32,6 +32,7 @@ function SimpleLayout({ children }) {
 	return (
 		<Box className={styles.root}>
 			<NavBar
+				logo='/Home/logo.jpg'
 				title='UCT IT'
 				items={list}
 				breakpointUp={breakpoint}

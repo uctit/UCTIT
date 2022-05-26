@@ -24,8 +24,6 @@ const useStyles = makeStyles((theme) => {
 		},
 		section: {
 			textAlign: 'center',
-			marginTop: theme.spacing(8),
-			marginBottom: theme.spacing(10),
 			paddingLeft: theme.spacing(6),
 			paddingRight: theme.spacing(6),
 		},
@@ -34,7 +32,8 @@ const useStyles = makeStyles((theme) => {
 			fontWeight: 'bold',
 			textAlign: 'center',
 			color: theme.palette.primary.main,
-			marginTop: theme.spacing(5)
+			marginTop: theme.spacing(5),
+			marginBottom: theme.spacing(5)
 		},
 		sectionSubtitle: {
 			fontSize: '28px',
@@ -56,7 +55,7 @@ const Featured = () => {
 
 			<Box>
 				{services.map((service, index) => (
-					<Grid key={index} container spacing={6} direction={index % 2 === 0 ? 'row' : 'row-reverse'} justifyContent='center' alignItems='center' className={styles.section} >
+					<Grid key={index} container spacing={1} direction={index % 2 === 0 ? 'row' : 'row-reverse'} justifyContent='center' alignItems='center' className={styles.section} >
 						<Grid item xs={12} lg={6}>
 							
 							<Link href={service.link} passHref>
@@ -69,9 +68,7 @@ const Featured = () => {
 
 						{service.picture && 
 							<Grid item xs={12} lg={6}>
-								<Paper elevation={0}>
-									<Image src={service.picture} height='500vh' width='500vw' alt={service.shortdescription} />
-								</Paper>
+								<Image src={service.picture} height='500vh' width='500vw' alt={service.shortdescription} />
 							</Grid>
 						}
 					</Grid>

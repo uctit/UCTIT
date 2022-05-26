@@ -31,6 +31,7 @@ class MyDocument extends Document {
 					<meta name="description" content="Provide IT Services and Solutions" />
 					<meta name="keywords" content='IT, IT solutions, IT services, digital marketing, marketing, web design, web development
 					, reliable IT Solutions, reliable IT Services, affordable IT Solutions, affordable IT Services' />
+					<link rel="icon" href="/Home/logo.jpg" />
 					<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet"></link>
 				</Head>
 				<body>
