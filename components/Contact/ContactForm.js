@@ -1,5 +1,3 @@
-import { server } from '../../config';
-
 import { useState } from 'react';
 
 import {
@@ -16,7 +14,6 @@ import {
 const ContactForm = () => {
 	const theme = useTheme();
 	const breakpointUp = useMediaQuery(theme.breakpoints.up("sm"));
-
 	const useStyles = makeStyles((theme) => {
 		return {
 			page: {
@@ -82,7 +79,7 @@ const ContactForm = () => {
 			message: message.value,
 			phone: phone.value
 		};
-		let response = await fetch(`${server}/api/contact`, {
+		let response = await fetch(`/api/contact`, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json;charset=utf-8",
